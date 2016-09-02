@@ -1,0 +1,173 @@
+{
+  "basics": {
+    "name": "Justin Gorham",
+    "location": {
+      "address": "3637 Rendition St",
+      "postalCode": "27610",
+      "city": "Raleigh",
+      "countryCode": "US",
+      "region": "North Carolina"
+    },
+    "profiles": [
+      {
+        "network": "Linkedin",
+        "username": "justingorham",
+        "url": "https://www.linkedin.com/in/justingorh"
+      },
+      {
+        "network": "Github",
+        "username": "justingorham",
+        "url": "https://github.com/justingorham"
+      },
+      {
+        "network": "Twitter",
+        "username": "justingorham",
+        "url": "https://www.twitter.com/justingorham"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Itron",
+      "website": "http://www.itron.com/",
+      "position": "Senior Software Engineer",
+      "startDate": "2015-05",
+      "summary": "Currently supporting front-end and back-end development efforts for N-tier enterprise application software.",
+      "highlights": [
+        "Supporting development efforts for single-page web application for end-users powered by AngularJS",
+        "Supporting development of RESTful services backed by relational data stores.",
+        "Working with other decoupled services within the enterprise application via a message bus architecture "
+      ]
+    },
+    {
+      "company": "CircleGraphics",
+      "website": "http://www.circlegraphicsonline.com/",
+      "position": ".NET Developer",
+      "startDate": "2015-02",
+      "endDate": "2015-05",
+      "summary": "All work here was the same as at CafePress. The division I worked for was acquired by CircleGraphics",
+      "highlights": []
+    },
+    {
+      "company": "CafePress",
+      "website": "http://www.cafepress.com/",
+      "position": ".NET Developer",
+      "startDate": "2013-09",
+      "endDate": "2015-02",
+      "summary": "Supported front-end and back-end development efforts for end-consumer facing e-commerce web applications",
+      "highlights": [
+        "Developed single-page mobile version of a proprietary web application that was powered by AngularJS and backed by Web API"
+      ]
+    },
+    {
+      "company": "Med3000/McKesson",
+      "website": "http://www.mckesson.com/",
+      "position": "Software Developer",
+      "startDate": "2013-06",
+      "endDate": "2013-09",
+      "summary": "Designed, built and maintained software components in proprietary electronic healthcare record and practice management software ",
+      "highlights": [
+        "Supported development of single-page application powered by Knockout.js and Kendo UI"
+      ]
+    },
+    {
+      "company": "Measurement Inc.",
+      "website": "http://www.measurementinc.com/",
+      "position": "Software Developer",
+      "startDate": "2012-09",
+      "endDate": "2013-06",
+      "summary": "Supported front-end and back-end development of proprietary enterprise software for school districts",
+      "highlights": [
+        "Supported front-end and back-end development efforts for applications written in WebForms and ASP.NET MVC",
+        "Led the initiative to replace the use of ADO.NET with the Entity Framework which allowed for Code-First database migrations",
+        "Led the initiative automate deployments via CruiseControl and Octopus Deploy"
+      ]
+    },
+    {
+      "company": "Sensus",
+      "website": "http://sensus.com/",
+      "position": "Quality Engineer",
+      "startDate": "2012-05",
+      "endDate": "2013-01",
+      "summary": "Led the development effort to automate assuring the quality of meter batteries through the extended use of a desktop application",
+      "highlights": [
+        "Developed a desktop application using WinForms (company requirement), LINQ to SQL and SQL Server Compact for data persistence",
+        "Enabled custom built software to communicate with and control external devices such as a temperature chambers and battery testers"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "North Carolina State University",
+      "gpa": "",
+      "courses": [],
+      "startDate": "2010-08",
+      "endDate": "2012-08",
+      "area": "Computer Science",
+      "studyType": "Masters"
+    },
+    {
+      "institution": "North Carolina State University",
+      "gpa": "",
+      "courses": [],
+      "startDate": "2006-08",
+      "endDate": "2010-05",
+      "area": "Computer Science",
+      "studyType": "Bachelor of Science"
+    },
+    {
+      "institution": "North Carolina State University",
+      "gpa": "",
+      "courses": [],
+      "startDate": "2006-08",
+      "endDate": "2010-05",
+      "area": "Applied Mathematics",
+      "studyType": "Bachelor of Science"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Javascript",
+      "level": "Expert",
+      "keywords": [
+        "ES6",
+        "Node.js",
+        "Angular",
+        "React"
+      ]
+    },
+    {
+      "name": ".NET",
+      "level": "Expert",
+      "keywords": [
+        "C#",
+        "ASP.NET",
+        "LINQ",
+        "MVC"
+      ]
+    },
+    {
+      "name": "Virtualization",
+      "level": "Novice",
+      "keywords": [
+        "docker"
+      ]
+    }
+  ],
+  "interests": [
+    {
+      "name": "Cloud Services",
+      "keywords": [
+        "AWS",
+        "Azure"
+      ]
+    }
+  ],
+  "references": 0,
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ]
+}
