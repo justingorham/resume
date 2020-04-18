@@ -1,0 +1,26 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "generate-json": "yaml2json -p -s resume.yml",
+    "test": "npm run generate-json && resume test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justingorham/resume.git"
+  },
+  "keywords": [],
+  "author": "Justin Gorham (https://justin.gorh.am)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justingorham/resume/issues"
+  },
+  "homepage": "https://github.com/justingorham/resume#readme",
+  "devDependencies": {
+    "resume-cli": "^1.2.7",
+    "yamljs": "^0.3.0"
+  }
+}
