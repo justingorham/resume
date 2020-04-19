@@ -1,6 +1,5 @@
 ## Justin Gorham
 
-Phone: 919-475-6626
 Email: [justingorham@gmail.com](mailto:justingorham@gmail.com)
 Address: Raleigh, NC, US
 
