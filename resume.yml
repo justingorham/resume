@@ -1,0 +1,156 @@
+basics:
+  name: Justin Gorham
+  label: Software Engineer
+  email: justingorham@gmail.com
+  url: https://justin.gorh.am
+  summary: Astute, forward-thinking professional with a solid educational background and the ability to meet and exceed targeted objectives on a continual basis. Adept in leading initiatives to improve efficiencies. Well versed in creating and maintaining software solutions
+  location:
+    city: Raleigh
+    countryCode: US
+    region: NC
+
+education:
+  - Institution: North Carolina State University
+    area: Computer Science
+    studyType: Bachelors
+    startDate: "2006-08-16"
+    endDate: "2010-05-14"
+  - Institution: North Carolina State University
+    area: Applied Mathematics
+    studyType: Bachelors
+    startDate: "2006-08-16"
+    endDate: "2010-05-14"
+  - Institution: North Carolina State University
+    area: Computer Science
+    studyType: Masters
+    startDate: "2010-08-18"
+    endDate: "2012-08-10"
+
+work:
+  - company: CenterEdge Software
+    position: Senior Software Engineer
+    url: https://centeredgesoftware.com/
+    startDate: "2018-10-22"
+    summary: Design, develop, and maintain solutions as part of a ground-up re-engineering of software applications using the latest .NET and front-end technologies.
+    highlights:
+      - Rewrote client-side Electron-based Kiosk application using Angular and ngrx
+      - Write and maintain .NET core micro-services using hexagonal architecture
+    technologiesUsed:
+      - Angular
+      - Typescript
+      - Docker
+      - Kuberntetes
+      - .NET core,
+  - company: Itron
+    position: Senior Software Engineer
+    url: https://itron.com/
+    startDate: "2015-05-18"
+    endDate: "2018-10-18"
+    summary: Developed code in C#.NET for a large-scale multithreaded server-side application as well as AngularJS for client-side management of application.
+    highlights:
+      - Wrote and maintained client side headend system using AngularJS, D3 for custom controls and graphs, Kendo UI and RequireJS
+      - Developed cutting edge interfaces using Angular 6.x and SystemJS
+      - Developed Backend, C#.NET N-Tiered application for a multithreaded environment; the application, backed by multiple RDBMS providers (MS-SQL, Oracle) and decoupled via messaging queues pulled data from meters into the collection engine.
+  - company: CafePress/CircleGraphics
+    position: .NET Developer
+    url: https://www.circlegraphicsonline.com/
+    startDate: "2013-09-03"
+    endDate: "2015-05-08"
+    summary: Developed and maintained primary .NET based e-commerce platform as well as created an AngularJS based mobile site powered by a .NET WebAPI backend.
+    highlights:
+      - Designed, built and maintained software components in proprietary Ecommerce web applications
+      - Designed and maintained rich graphical user interfaces for both computer and mobile screens using HTML, CSS, and JavaScript Frameworks including jQuery, jQuery UI, and Angular JS
+      - Designed and maintained an n-tiered, SQL Server backend, .NET MVC, single page application that utilizes RESTful web services.
+  - company: Med3000/McKesson
+    position: Software Developer (Contractor)
+    url: https://www.mckesson.com/
+    startDate: "2013-06-18"
+    endDate: "2013-08-30"
+    summary: Full-stack maintainance and new feature work on a proprietery healthcare mangement system
+    highlights:
+      - Designed, built and maintained software components in proprietary electronic healthcare record and practice management software using Scrum/Kanban methodologies
+      - Designed and maintained rich graphical user interfaces using HTML, CSS, and JavaScript Frameworks including jQuery, Knockout JS, and Kendo UI
+      - Designed and maintained an n-tiered, SQL Server backend, .NET MVC, single page application that utilizes RESTful web services.
+  - company: Measurement Inc.
+    position: Software Developer
+    url: https://www.measurementinc.com/
+    startDate: "2012-09-10"
+    endDate: "2013-06-14"
+    summary: Maintained and added new features to the companies proprietary software
+    highlights:
+      - Maintained and added features and improvements to existing Web Forms and MVC web applications written in C# and VB. Many of these improvements include separating business from presentation logic in web forms and converting application to n-tiered applications
+      - Introduce the Entity Framework to existing applications so that there is an abstraction between persistence logic and domain objects. The Entity Framework is also used to evolve databases using Migrations
+      - Maintain all projects in the team’s continuous integration server as well as the team’s deployment server
+  - company: Sensus
+    position: Test Automation Engineer (Contractor)
+    url: https://sensus.com/
+    startDate: "2012-05-21"
+    endDate: "2013-01-11"
+    summary: Created an in house quality assurance solution for testing meter batteries by simulating 20 years of use over the course of 30 days.
+    highlights:
+      - Created a desktop application using Win Forms with the purpose of testing product batteries.
+      - Created multi-tier application was developed using a Test-driven development process.
+      - SQL Server Compact persistence with the Entity Framework.
+      - XML configuration and schmea validation
+      - Wrote adapaters to communicate with external devices that used varying protocols such as Modbus and SCPI.
+# Skill levels
+# Beginner, Familiar, Proficient, Expert, Master
+skills:
+  - name: Angular
+    level: Expert
+    keywords: 
+      - Typescript
+      - Module
+      - Component
+      - Directive
+      - Service
+  - name: Typescript/Javascript
+    level: Master
+    keywords:
+      - ECMAScript
+      - Node.js
+      - Browser
+      - Prototype
+  - name: React
+    level: Proficient
+    keywords:
+      - Virtual DOM
+      - component
+      - useEffect
+      - useState
+      - Lifecycle Hooks
+  - name: Containerization
+    level: Proficient
+    keywords:
+      - Docker
+      - Kuberntetes
+      - 12-Factor App
+  - name: CI/CD
+    level: Proficient
+    keywords:
+      - Jenkins
+      - Octopus Deploy
+      - Code Pipeline
+  - name: Version Control
+    level: Proficient
+    keywords:
+      - GIT
+      - SVN
+      - Perforce
+  - name: PaaS
+    level: Proficient
+    keywords:
+      - Azure
+      - AWS
+      - Serverless
+  - name: .NET
+    level: Proficient
+    keywords:
+      - C#,
+      - ASP.NET
+  - name: Scripting
+    level: Proficient
+    keywords:
+      - Powershell
+      - Bash
+      - cli
