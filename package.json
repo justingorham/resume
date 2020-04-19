@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "generate-json": "yaml2json -p -s resume.yml",
+    "export:html": "npm run generate-json && resume export index.html",
     "test": "npm run generate-json && resume test"
   },
   "repository": {
