@@ -7,11 +7,11 @@
   "scripts": {
     "generate:json": "yaml2json -p -s resume.yml",
     "export:html": "resume export index.html",
-    "export:md": "resume export README.html -t md && npm run rename:readme",
+    "export:md": "resume export README.html -t md && yarn rename:readme",
     "export:pdf": "resume export resume.pdf",
-    "pre-commit": "npm run generate:json && npm run export:html && npm run export:md && git add -A",
+    "postinstall": "husky install",
     "rename:readme": "node -e \"require('fs').rename('README.html', 'README.md', function(err) { if (err) console.error(err); console.log('File successfully renamed!') })\"",
-    "test": "npm run generate:json && resume test"
+    "test": "yarn generate:json && resume validate"
   },
   "repository": {
     "type": "git",
@@ -25,14 +25,9 @@
   },
   "homepage": "https://github.com/justingorham/resume#readme",
   "devDependencies": {
-    "husky": "^4.2.5",
+    "husky": "^5.0.9",
     "jsonresume-theme-md": "^1.1.1",
-    "resume-cli": "^1.2.7",
+    "resume-cli": "^3.0.4",
     "yamljs": "^0.3.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run pre-commit"
-    }
   }
 }
