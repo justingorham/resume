@@ -1,529 +1,518 @@
 <!doctype html>
-<html>
-	<head>
-	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-	
-	<title>Justin Gorham</title>
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-	
-	<style type="text/css">
-	@import url(
-	https://fonts.googleapis.com/css?family=Lato:400,700
-);
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Justin Gorham</title>
+    <meta name="description" content="Astute, forward-thinking professional with a solid educational background and the ability to meet and exceed targeted objectives on a continual basis. Adept in leading initiatives to improve efficiencies. Well versed in creating and maintaining software solutions" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" />
+    <style>:root {
+  /* Colors */
+  --primaryColor: #212529;
+  --secondaryColor: #95a5a6;
+  --accentColor: #f1c40f;
+  --linkColor: #2ecc71;
+  --mutedColor: #f4f6f6;
+
+  /* Typography */
+  --ratio: 1.25;
+  --scale0: 1rem;
+  --scale1: calc(var(--scale0) * var(--ratio));
+  --scale2: calc(var(--scale1) * var(--ratio));
+  --scale3: calc(var(--scale2) * var(--ratio));
+  --scale4: calc(var(--scale3) * var(--ratio));
+  --scale5: calc(var(--scale4) * var(--ratio));
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
 body {
-	background: #fff;
-	font-family: Lato, sans-serif;
-	margin: 0 0 80px;
+  color: var(--primaryColor);
+  display: grid;
+  font: 1em/1.5 Lato, sans-serif;
+  gap: 2em;
+  grid-template-columns:
+    [full-start]
+    1fr
+    [main-start side-start]
+    minmax(min-content, 12em)
+    [side-end content-start]
+    minmax(min-content, 36em)
+    [main-end content-end]
+    1fr
+    [full-end];
+  grid-template-rows: auto [content] 0;
+  margin-bottom: 4em;
 }
+
+body::before {
+  content: '';
+  grid-column: full;
+  grid-row: content;
+}
+
+ol,
+ul {
+  padding-left: 1em;
+}
+
+li + li {
+  margin-top: 0.2em;
+}
+
+li::marker {
+  color: var(--mutedColor);
+}
+
 a {
-	color: #2ecc71;
+  color: var(--linkColor);
+  text-decoration: none;
+  transition: color 0.2s;
 }
+
 a:focus,
 a:hover {
-	color: #f1c40f;
-	text-decoration: none;
+  color: var(--accentColor);
 }
-p {
-	line-height: 1.5;
-	margin: 0;
-}
-p + p {
-	margin-top: 10px;
-}
+
 h1,
 h2,
 h3,
+h5 {
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--scale5);
+}
+
+h2 {
+  color: var(--secondaryColor);
+  font-size: var(--scale4);
+}
+
+h3 {
+  color: var(--accentColor);
+  font-size: var(--scale3);
+  grid-column: side;
+  margin-bottom: 1rem;
+}
+
 h4 {
-	margin-top: 0
+  font-size: var(--scale2);
 }
-section {
-	margin-top: 30px;
+
+h5 {
+  font-size: var(--scale1);
 }
-li {
-	line-height: 1.8;
-	list-style: none;
+
+h6 {
+  font-size: var(--scale0);
 }
-li:before {
-	content: "\f052";
-	float: left;
-	font: 13px Octicons;
-	margin-top: 6px;
-	margin-left: -20px;
-	opacity: .1;
-	position: absolute;
-}
+
 blockquote {
-	border-left: 5px solid #e7e9ec;
-	font-size: 14px;
-}
-em {
-	color: #95a5a6;
-	font-weight: normal;
-	font-style: normal;
-}
-h4 span:first-child {
-	color: #000;
-	font-weight: bold;
-}
-.container {
-	max-width: 750px;
-	padding: 0 30px;
-}
-.col-sm-6 {
-	margin-bottom: 10px;
-}
-.col-sm-12 h4 {
-	margin-top: 12px; 
-}
-.col-sm-12 + .col-sm-12 {
-	margin-top: 30px;
-}
-#header {
-	background: #f4f6f6;
-	padding: 50px 0;
-	margin-bottom: 30px;
-}
-#header h2 {
-	color: #95a5a6;
-	font-size: 24px;
-}
-#content h3 {
-	color: #f1c40f;
-	font-size: 26px;
-	margin-top: -4px;
-}
-#content aside {
-	text-align: right;
-	padding-right: 30px;
-}
-#profiles .network {
-	text-transform: capitalize;
-}
-#work .position,
-#volunteer .position {
-	font-weight: bold;
-	margin-bottom: 8px;
-}
-#education .area {
-	font-weight: bold;
-}
-#education .area:before {
-	content: "\f0d7";
-	font: 16px Octicons;
-	margin-right: 6px;
-}
-#education .studyType {
-	margin-left: 25px;
-}
-#awards .summary,
-#publications .summary {
-	margin-top: 8px;
-}
-#publications .website a:before {
-	content: attr(href);
+  border-left: 0.2em solid var(--mutedColor);
+  padding-left: 1em;
 }
 
-@media (min-width: 480px) {
-	.strike-through {
-		border-top: 1px solid #f4f6f6;
-		height: 20px;
-		margin-top: 12px;
-		margin-bottom: -2px;
-		position: relative;
-	}
-	.strike-through span,
-	.strike-through a {
-		background: #fff;
-		position: absolute;
-	}
-	.strike-through span:first-child {
-		padding-right: 20px;
-		margin-top: -12px;
-	}
-	.strike-through span + span {
-		font-size: 14px;
-		margin-top: -10px;
-		padding-left: 20px;
-		right: 0;
-	}
-}
-@media (max-width: 768px) {
-	.col-sm-6:last-child {
-		margin-bottom: 0px;
-	}
-	#content aside {
-		margin-bottom: 20px;
-		padding-right: 0;
-		text-align: left;
-	}
-	#publications .website a:before {
-		content: "View publication";
-	}
-}
-@media (max-width: 480px) {
-	h1 {
-		font-size: 26px;
-	}
-	.date {
-		font-size: 14px;
-		margin-bottom: 5px;
-	}
-	.strike-through span:first-child {
-		margin-bottom: 7px;
-	}
-	.strike-through span {
-		display: block;
-	}	
-	#header {
-		margin-bottom: 10px;
-		padding: 40px 0;
-	}
-	#actions {
-		display: none;
-	}
+cite {
+  color: var(--secondaryColor);
+  font-style: inherit;
 }
 
-	</style>
-	
-	</head>
-	<body>
-	
-	<header id="header">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-9 col-sm-push-3">
-					<h1>
-						Justin Gorham
-					</h1>
-					<h2>
-						Software Engineer
-					</h2>
-				</div>
-			</div>
-		</div>
-	</header>
-	<div id="content" class="container">
+cite::before {
+  content: '— ';
+}
 
-	<section id="contact" class="row">
-		<aside class="col-sm-3">
-			<h3>Contact</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-6">
-				<strong>Email</strong>
-				<div class="email">justingorham@gmail.com</div>
-			</div>
-			</div>
-		</div>
-	</section>
-	<section id="about" class="row">
-		<aside class="col-sm-3">
-			<h3>About</h3>
-		</aside>
-		<div class="col-sm-9">
-			<p>Astute, forward-thinking professional with a solid educational background and the ability to meet and exceed targeted objectives on a continual basis. Adept in leading initiatives to improve efficiencies. Well versed in creating and maintaining software solutions</p>
-		</div>
-	</section>
+.masthead {
+  background: var(--mutedColor);
+  display: inherit;
+  gap: inherit;
+  grid-column: full;
+  grid-template-columns: inherit;
+  padding: 4em 0;
+  row-gap: 0;
+}
 
-	<section id="work" class="row">
-		<aside class="col-sm-3">
-			<h3>Work</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>CenterEdge Software</span>
-					<span class="date">
-						2018-10-22 — 
-					</span>
-				</h4>
-				<div class="position">
-					Senior Software Engineer
-				</div>
-				<div class="summary">
-					<p>Design, develop, and maintain solutions as part of a ground-up re-engineering of software applications using the latest .NET and front-end technologies.</p>
-				</div>
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					<li class="bullet">Rewrote client-side Electron-based Kiosk application using Angular and ngrx</li>
-					<li class="bullet">Write and maintain .NET core micro-services using hexagonal architecture</li>
-				</ul>
-			</div>
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>Itron</span>
-					<span class="date">
-						2015-05-18 — 2018-10-18
-					</span>
-				</h4>
-				<div class="position">
-					Senior Software Engineer
-				</div>
-				<div class="summary">
-					<p>Developed code in C#.NET for a large-scale multithreaded server-side application as well as AngularJS for client-side management of application.</p>
-				</div>
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					<li class="bullet">Wrote and maintained client side headend system using AngularJS, D3 for custom controls and graphs, Kendo UI and RequireJS</li>
-					<li class="bullet">Developed cutting edge interfaces using Angular 6.x and SystemJS</li>
-					<li class="bullet">Developed Backend, C#.NET N-Tiered application for a multithreaded environment; the application, backed by multiple RDBMS providers (MS-SQL, Oracle) and decoupled via messaging queues pulled data from meters into the collection engine.</li>
-				</ul>
-			</div>
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>CafePress/CircleGraphics</span>
-					<span class="date">
-						2013-09-03 — 2015-05-08
-					</span>
-				</h4>
-				<div class="position">
-					.NET Developer
-				</div>
-				<div class="summary">
-					<p>Developed and maintained primary .NET based e-commerce platform as well as created an AngularJS based mobile site powered by a .NET WebAPI backend.</p>
-				</div>
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					<li class="bullet">Designed, built and maintained software components in proprietary Ecommerce web applications</li>
-					<li class="bullet">Designed and maintained rich graphical user interfaces for both computer and mobile screens using HTML, CSS, and JavaScript Frameworks including jQuery, jQuery UI, and Angular JS</li>
-					<li class="bullet">Designed and maintained an n-tiered, SQL Server backend, .NET MVC, single page application that utilizes RESTful web services.</li>
-				</ul>
-			</div>
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>Med3000/McKesson</span>
-					<span class="date">
-						2013-06-18 — 2013-08-30
-					</span>
-				</h4>
-				<div class="position">
-					Software Developer (Contractor)
-				</div>
-				<div class="summary">
-					<p>Full-stack maintainance and new feature work on a proprietery healthcare mangement system</p>
-				</div>
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					<li class="bullet">Designed, built and maintained software components in proprietary electronic healthcare record and practice management software using Scrum/Kanban methodologies</li>
-					<li class="bullet">Designed and maintained rich graphical user interfaces using HTML, CSS, and JavaScript Frameworks including jQuery, Knockout JS, and Kendo UI</li>
-					<li class="bullet">Designed and maintained an n-tiered, SQL Server backend, .NET MVC, single page application that utilizes RESTful web services.</li>
-				</ul>
-			</div>
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>Measurement Inc.</span>
-					<span class="date">
-						2012-09-10 — 2013-06-14
-					</span>
-				</h4>
-				<div class="position">
-					Software Developer
-				</div>
-				<div class="summary">
-					<p>Maintained and added new features to the companies proprietary software</p>
-				</div>
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					<li class="bullet">Maintained and added features and improvements to existing Web Forms and MVC web applications written in C# and VB. Many of these improvements include separating business from presentation logic in web forms and converting application to n-tiered applications</li>
-					<li class="bullet">Introduce the Entity Framework to existing applications so that there is an abstraction between persistence logic and domain objects. The Entity Framework is also used to evolve databases using Migrations</li>
-					<li class="bullet">Maintain all projects in the team’s continuous integration server as well as the team’s deployment server</li>
-				</ul>
-			</div>
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>Sensus</span>
-					<span class="date">
-						2012-05-21 — 2013-01-11
-					</span>
-				</h4>
-				<div class="position">
-					Test Automation Engineer (Contractor)
-				</div>
-				<div class="summary">
-					<p>Created an in house quality assurance solution for testing meter batteries by simulating 20 years of use over the course of 30 days.</p>
-				</div>
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					<li class="bullet">Created a desktop application using Win Forms with the purpose of testing product batteries.</li>
-					<li class="bullet">Created multi-tier application was developed using a Test-driven development process.</li>
-					<li class="bullet">SQL Server Compact persistence with the Entity Framework.</li>
-					<li class="bullet">XML configuration and schmea validation</li>
-					<li class="bullet">Wrote adapaters to communicate with external devices that used varying protocols such as Modbus and SCPI.</li>
-				</ul>
-			</div>
-			</div>
-		</div>
-	</section>
+.masthead > *,
+section {
+  grid-column: main;
+}
 
-	
-	<section id="education" class="row">
-		<aside class="col-sm-3">
-			<h3>Education</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span></span>
-					<span class="date">
-						2006-08-16 — 2010-05-14
-					</span>
-				</h4>
-				<div class="area">
-					Computer Science
-				</div>
-				<div class="studyType">
-					Bachelors
-				</div>
-			</div>
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span></span>
-					<span class="date">
-						2006-08-16 — 2010-05-14
-					</span>
-				</h4>
-				<div class="area">
-					Applied Mathematics
-				</div>
-				<div class="studyType">
-					Bachelors
-				</div>
-			</div>
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span></span>
-					<span class="date">
-						2010-08-18 — 2012-08-10
-					</span>
-				</h4>
-				<div class="area">
-					Computer Science
-				</div>
-				<div class="studyType">
-					Masters
-				</div>
-			</div>
-			</div>
-		</div>
-	</section>
-	
-	
-	
-	<section id="skills" class="row">
-		<aside class="col-sm-3">
-			<h3>Skills</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>Angular</h4>
-				</div>
-				<ul class="keywords">
-					<li>Typescript</li>
-					<li>Module</li>
-					<li>Component</li>
-					<li>Directive</li>
-					<li>Service</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>Typescript/Javascript</h4>
-				</div>
-				<ul class="keywords">
-					<li>ECMAScript</li>
-					<li>Node.js</li>
-					<li>Browser</li>
-					<li>Prototype</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>React</h4>
-				</div>
-				<ul class="keywords">
-					<li>Virtual DOM</li>
-					<li>component</li>
-					<li>useEffect</li>
-					<li>useState</li>
-					<li>Lifecycle Hooks</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>Containerization</h4>
-				</div>
-				<ul class="keywords">
-					<li>Docker</li>
-					<li>Kuberntetes</li>
-					<li>12-Factor App</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>CI/CD</h4>
-				</div>
-				<ul class="keywords">
-					<li>Jenkins</li>
-					<li>Octopus Deploy</li>
-					<li>Code Pipeline</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>Version Control</h4>
-				</div>
-				<ul class="keywords">
-					<li>GIT</li>
-					<li>SVN</li>
-					<li>Perforce</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>PaaS</h4>
-				</div>
-				<ul class="keywords">
-					<li>Azure</li>
-					<li>AWS</li>
-					<li>Serverless</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>.NET</h4>
-				</div>
-				<ul class="keywords">
-					<li>C#,</li>
-					<li>ASP.NET</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>Scripting</h4>
-				</div>
-				<ul class="keywords">
-					<li>Powershell</li>
-					<li>Bash</li>
-					<li>cli</li>
-				</ul>
-			</div>
-			</div>
-		</div>
-	</section>
+article > * + *,
+blockquote > * + * {
+  margin-top: 0.6em;
+}
 
+.stack {
+  display: grid;
+  gap: 1.5em;
+}
 
-	
+.grid-list {
+  display: grid;
+  gap: 1em;
+}
 
-	</div>
-	
-	</body>
+.spaced-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spaced-list:first-child::before {
+  border-bottom: 1px solid var(--mutedColor);
+  content: '';
+  flex-grow: 1;
+  margin: 0 1em;
+  order: 1;
+}
+
+.spaced-list > :nth-child(2) {
+  order: 2;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.tag-list > li {
+  background: var(--mutedColor);
+  margin: 0 0.2em 0.2em 0;
+  padding: 0.2em 0.6em;
+}
+
+@media print, (min-width: 48em) {
+  h3 {
+    text-align: right;
+    margin-bottom: inherit;
+  }
+
+  .masthead > *,
+  section {
+    grid-column: content;
+  }
+
+  section {
+    display: contents;
+  }
+
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+</style>
+  </head>
+  <body>
+      <header class="masthead">
+          <h1>Justin Gorham</h1>
+          <h2>Software Engineer</h2>
+      </header>
+      <section id="contact">
+        <h3>Contact</h3>
+        <div class="grid-list">
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:justingorham@gmail.com">justingorham@gmail.com</a>
+            </div>
+            <div>
+              <h4>Website</h4>
+              <a href="https://justin.gorh.am">justin.gorh.am</a>
+            </div>
+        </div>
+      </section>
+        <section id="about">
+          <h3>About</h3>
+          <article>
+            <p>Astute, forward-thinking professional with a solid educational background and the ability to meet and exceed targeted objectives on a continual basis. Adept in leading initiatives to improve efficiencies. Well versed in creating and maintaining software solutions</p>
+          </article>
+        </section>
+
+      <section id="work">
+        <h3>Work</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2018-10-22">Oct 2018</time> –
+                    Present
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Senior Software Engineer</strong>
+                    <a href="https://centeredgesoftware.com/">centeredgesoftware.com</a>
+                </div>
+              </header>
+                <p>Design, develop, and maintain solutions as part of a ground-up re-engineering of software applications using the latest .NET and front-end technologies.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Rewrote client-side Electron-based Kiosk application using Angular and ngrx</li>
+                    <li>Write and maintain .NET core micro-services using hexagonal architecture</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2015-05-18">May 2015</time> –
+                    <time datetime="2018-10-18">Oct 2018</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Senior Software Engineer</strong>
+                    <a href="https://itron.com/">itron.com</a>
+                </div>
+              </header>
+                <p>Developed code in C#.NET for a large-scale multithreaded server-side application as well as AngularJS for client-side management of application.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Wrote and maintained client side headend system using AngularJS, D3 for custom controls and graphs, Kendo UI and RequireJS</li>
+                    <li>Developed cutting edge interfaces using Angular 6.x and SystemJS</li>
+                    <li>Developed Backend, C#.NET N-Tiered application for a multithreaded environment; the application, backed by multiple RDBMS providers (MS-SQL, Oracle) and decoupled via messaging queues pulled data from meters into the collection engine.</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2013-09-03">Sep 2013</time> –
+                    <time datetime="2015-05-08">May 2015</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>.NET Developer</strong>
+                    <a href="https://www.circlegraphicsonline.com/">www.circlegraphicsonline.com</a>
+                </div>
+              </header>
+                <p>Developed and maintained primary .NET based e-commerce platform as well as created an AngularJS based mobile site powered by a .NET WebAPI backend.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Designed, built and maintained software components in proprietary Ecommerce web applications</li>
+                    <li>Designed and maintained rich graphical user interfaces for both computer and mobile screens using HTML, CSS, and JavaScript Frameworks including jQuery, jQuery UI, and Angular JS</li>
+                    <li>Designed and maintained an n-tiered, SQL Server backend, .NET MVC, single page application that utilizes RESTful web services.</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2013-06-18">Jun 2013</time> –
+                    <time datetime="2013-08-30">Aug 2013</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Software Developer (Contractor)</strong>
+                    <a href="https://www.mckesson.com/">www.mckesson.com</a>
+                </div>
+              </header>
+                <p>Full-stack maintainance and new feature work on a proprietery healthcare mangement system</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Designed, built and maintained software components in proprietary electronic healthcare record and practice management software using Scrum/Kanban methodologies</li>
+                    <li>Designed and maintained rich graphical user interfaces using HTML, CSS, and JavaScript Frameworks including jQuery, Knockout JS, and Kendo UI</li>
+                    <li>Designed and maintained an n-tiered, SQL Server backend, .NET MVC, single page application that utilizes RESTful web services.</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2012-09-10">Sep 2012</time> –
+                    <time datetime="2013-06-14">Jun 2013</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Software Developer</strong>
+                    <a href="https://www.measurementinc.com/">www.measurementinc.com</a>
+                </div>
+              </header>
+                <p>Maintained and added new features to the companies proprietary software</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Maintained and added features and improvements to existing Web Forms and MVC web applications written in C# and VB. Many of these improvements include separating business from presentation logic in web forms and converting application to n-tiered applications</li>
+                    <li>Introduce the Entity Framework to existing applications so that there is an abstraction between persistence logic and domain objects. The Entity Framework is also used to evolve databases using Migrations</li>
+                    <li>Maintain all projects in the team’s continuous integration server as well as the team’s deployment server</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2012-05-21">May 2012</time> –
+                    <time datetime="2013-01-11">Jan 2013</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Test Automation Engineer (Contractor)</strong>
+                    <a href="https://sensus.com/">sensus.com</a>
+                </div>
+              </header>
+                <p>Created an in house quality assurance solution for testing meter batteries by simulating 20 years of use over the course of 30 days.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Created a desktop application using Win Forms with the purpose of testing product batteries.</li>
+                    <li>Created multi-tier application was developed using a Test-driven development process.</li>
+                    <li>SQL Server Compact persistence with the Entity Framework.</li>
+                    <li>XML configuration and schmea validation</li>
+                    <li>Wrote adapaters to communicate with external devices that used varying protocols such as Modbus and SCPI.</li>
+                </ul>
+            </article>
+        </div>
+      </section>
+      <section id="education">
+        <h3>Education</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2006-08-16">Aug 2006</time> –
+                    <time datetime="2010-05-14">May 2010</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Computer Science</strong>
+                </div>
+              </header>
+                <p>Bachelors</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2006-08-16">Aug 2006</time> –
+                    <time datetime="2010-05-14">May 2010</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Applied Mathematics</strong>
+                </div>
+              </header>
+                <p>Bachelors</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2010-08-18">Aug 2010</time> –
+                    <time datetime="2012-08-10">Aug 2012</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Computer Science</strong>
+                </div>
+              </header>
+                <p>Masters</p>
+            </article>
+        </div>
+      </section>
+      <section id="skills">
+        <h3>Skills</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Angular</h4>
+                <ul class="tag-list">
+                    <li>Typescript</li>
+                    <li>Module</li>
+                    <li>Component</li>
+                    <li>Directive</li>
+                    <li>Service</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Typescript/Javascript</h4>
+                <ul class="tag-list">
+                    <li>ECMAScript</li>
+                    <li>Node.js</li>
+                    <li>Browser</li>
+                    <li>Prototype</li>
+                </ul>
+            </div>
+            <div>
+                <h4>React</h4>
+                <ul class="tag-list">
+                    <li>Virtual DOM</li>
+                    <li>component</li>
+                    <li>useEffect</li>
+                    <li>useState</li>
+                    <li>Lifecycle Hooks</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Containerization</h4>
+                <ul class="tag-list">
+                    <li>Docker</li>
+                    <li>Kuberntetes</li>
+                    <li>12-Factor App</li>
+                </ul>
+            </div>
+            <div>
+                <h4>CI/CD</h4>
+                <ul class="tag-list">
+                    <li>Jenkins</li>
+                    <li>Octopus Deploy</li>
+                    <li>Code Pipeline</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Version Control</h4>
+                <ul class="tag-list">
+                    <li>GIT</li>
+                    <li>SVN</li>
+                    <li>Perforce</li>
+                </ul>
+            </div>
+            <div>
+                <h4>PaaS</h4>
+                <ul class="tag-list">
+                    <li>Azure</li>
+                    <li>AWS</li>
+                    <li>Serverless</li>
+                </ul>
+            </div>
+            <div>
+                <h4>.NET</h4>
+                <ul class="tag-list">
+                    <li>C#,</li>
+                    <li>ASP.NET</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Scripting</h4>
+                <ul class="tag-list">
+                    <li>Powershell</li>
+                    <li>Bash</li>
+                    <li>cli</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+  </body>
 </html>
