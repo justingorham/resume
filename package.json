@@ -6,8 +6,8 @@
   "private": true,
   "scripts": {
     "generate:json": "ts-node tools/generate-resume-json.ts",
-    "export:html": "resume export index.html",
-    "export:md": "resume export README.html -t md && yarn rename:readme",
+    "export:html": "resume export index.html --theme onepage",
+    "export:md": "resume export README.html --theme onepage && yarn rename:readme",
     "export:pdf": "resume export resume.pdf",
     "postinstall": "husky install && ts-node tools/schema-declaration-files.ts",
     "rename:readme": "node -e \"require('fs').rename('README.html', 'README.md', function(err) { if (err) console.error(err); console.log('File successfully renamed!') })\"",
@@ -29,6 +29,7 @@
     "husky": "^5.2.0",
     "json-schema-to-typescript": "^10.1.3",
     "jsonresume-theme-md": "^1.1.1",
+    "jsonresume-theme-onepage": "^0.0.3",
     "resume-cli": "^3.0.4",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3",
