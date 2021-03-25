@@ -7,8 +7,8 @@
   "scripts": {
     "generate:json": "ts-node tools/generate-resume-json.ts",
     "export:html": "resume export index.html",
-    "export:md": "resume export README.html && yarn rename:readme",
-    "export:pdf": "resume export resume.pdf",
+    "export:md": "resume export README.html --theme jsonresume-theme-md && yarn rename:readme",
+    "export:pdf": "resume export resume.pdf --theme jsonresume-theme-flat",
     "postinstall": "husky install && ts-node tools/schema-declaration-files.ts",
     "rename:readme": "node -e \"require('fs').rename('README.html', 'README.md', function(err) { if (err) console.error(err); console.log('File successfully renamed!') })\"",
     "test": "yarn generate:json && resume validate"
