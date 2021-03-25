@@ -1,314 +1,375 @@
 <!doctype html>
-<html>
-	<head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Justin Gorham</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" />
+    <style>:root {
+  /* Colors */
+  --primaryColor: #212529;
+  --secondaryColor: #95a5a6;
+  --accentColor: #f1c40f;
+  --linkColor: #2ecc71;
+  --mutedColor: #f4f6f6;
 
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width, user-scalable=no, minimal-ui'>
+  /* Typography */
+  --ratio: 1.25;
+  --scale0: 1rem;
+  --scale1: calc(var(--scale0) * var(--ratio));
+  --scale2: calc(var(--scale1) * var(--ratio));
+  --scale3: calc(var(--scale2) * var(--ratio));
+  --scale4: calc(var(--scale3) * var(--ratio));
+  --scale5: calc(var(--scale4) * var(--ratio));
+}
 
-	<title>Justin Gorham</title>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-	<style>
-	body {
-  background: #EEEEEE;
-  font: 12px "Times New Roman", Times, sans-serif;
-  line-height: 1.4;
-  margin: 40px 0;
+html {
+  font-size: 14px;
 }
-em {
-  color: #999;
+
+body {
+  color: var(--primaryColor);
+  display: grid;
+  font: 1em/1.5 Lato, sans-serif;
+  gap: 2em;
+  grid-template-columns:
+    [full-start]
+    1fr
+    [main-start side-start]
+    minmax(min-content, 12em)
+    [side-end content-start]
+    minmax(min-content, 36em)
+    [main-end content-end]
+    1fr
+    [full-end];
+  grid-template-rows: auto [content] 0;
+  margin-bottom: 4em;
 }
-p {
-  line-height: 1.4;
+
+body::before {
+  content: '';
+  grid-column: full;
+  grid-row: content;
 }
+
+ol,
 ul {
-  margin-bottom: 0;
+  padding-left: 1em;
 }
-li {
-  margin-bottom: 2px;
+
+li + li {
+  margin-top: 0.2em;
 }
+
+li::marker {
+  color: var(--mutedColor);
+}
+
 a {
+  color: var(--linkColor);
   text-decoration: none;
+  transition: color 0.2s;
 }
 
-#resume {
-  margin: 0 auto;
-  max-width: 600px;
-  padding: 80px 100px;
-  background: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 4px #aaa;
-  -webkit-box-shadow: 2px 2px 4px #aaa;
+a:focus,
+a:hover {
+  color: var(--accentColor);
 }
 
-.coursesList {
-  width: 28%;
-  vertical-align: top;
-  display: inline-block;
+h1,
+h2,
+h3,
+h5 {
+  font-weight: normal;
 }
 
-.largeFont {
-  font-size: 20px;
+h1,
+h2,
+h3 {
+  line-height: 1.2;
 }
 
-.smallFont {
-  font-size: 12px;
+h1 {
+  font-size: var(--scale5);
 }
 
-.sectionBlock {
+h2 {
+  color: var(--secondaryColor);
+  font-size: var(--scale4);
+}
+
+h3 {
+  color: var(--accentColor);
+  font-size: var(--scale3);
+  grid-column: side;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: var(--scale2);
+}
+
+h5 {
+  font-size: var(--scale1);
+}
+
+h6 {
+  font-size: var(--scale0);
+}
+
+blockquote {
+  border-left: 0.2em solid var(--mutedColor);
+  padding-left: 1em;
+}
+
+cite {
+  color: var(--secondaryColor);
+  font-style: inherit;
+}
+
+cite::before {
+  content: '— ';
+}
+
+.masthead {
+  background: var(--mutedColor);
+  display: inherit;
+  gap: inherit;
+  grid-column: full;
+  grid-template-columns: inherit;
+  padding: 4em 0;
+  row-gap: 0;
+}
+
+.masthead > *,
+section {
+  grid-column: main;
+}
+
+article > * + *,
+blockquote > * + * {
+  margin-top: 0.6em;
+}
+
+.stack {
+  display: grid;
+  gap: 1.5em;
+}
+
+.grid-list {
+  display: grid;
+  gap: 1em;
+}
+
+.spaced-list {
   display: flex;
-  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.sectionName {
-  width: 18%;
-  vertical-align: top;
-  display: inline-block;
+.spaced-list:first-child::before {
+  border-bottom: 1px solid var(--mutedColor);
+  content: '';
+  flex-grow: 1;
+  margin: 0 1em;
+  order: 1;
 }
 
-.sectionContent {
-  width: 80%;
-  vertical-align: top;
-  display: inline-block;
+.spaced-list > :nth-child(2) {
+  order: 2;
 }
 
-.sectionContent ul {
-  padding-left: 20px;
-  margin-top: 6px;
-  list-style-type: circle;
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
 }
 
-.sectionContent .title {
-  font-weight: bold;
+.tag-list > li {
+  background: var(--mutedColor);
+  margin: 0 0.2em 0.2em 0;
+  padding: 0.2em 0.6em;
 }
 
-.sectionContent .date {
-  float: right;
-}
-
-.sectionContent .separator {
-  height: 14px;
-}
-
-.sectionLine {
-  border-style: dashed;
-  border-width: 1px;
-  border-color: #CFCFCF;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.divider {
-  font-weight: bold;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.summary {
-  margin-top: 6px;
-}
-
-.skillBlock {
-  margin-bottom: 4px;
-}
-
-.jobBlock {
-  page-break-inside: avoid;
-}
-
-/* Media Queries */
-@media only screen and (max-width: 40em) {
-  body {
-    margin: 0;
-    font-size: 14px;
-  }
-  #resume {
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 0.5em 1em;
-    border: none;
-  }
-  .sectionContent {
-    width: 100%;
-  }
-  .sectionContent .date {
-    padding-right: 2em;
-  }
-  .sectionName {
-    width: auto;
-  }
-  .largeFont {
-    font-size: 20px;
-  }
-  .smallFont {
-    font-size: 14px;
-  }
-}
-
-@media print {
-  #resume {
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 0px 0px;
-    border: 0px;
-    background: #fff;
-    box-shadow: none;
-    -webkit-box-shadow: none;
+@media print, (min-width: 48em) {
+  h3 {
+    text-align: right;
+    margin-bottom: inherit;
   }
 
-  a {
-    color: black;
+  .masthead > *,
+  section {
+    grid-column: content;
+  }
+
+  section {
+    display: contents;
+  }
+
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
   }
 }
-
-	</style>
-
-	</head>
-	<body>
-
-	<div id='resume'>
-  <div id='nameBlock' class='largeFont'>
-    <span class='name'>
-      Justin Gorham,
-    </span>
-    <span class='label'>Software Engineer</span>
-  </div>
-  <div id='basicsBlock' class='smallFont'>
-    <div class='contactBlock'>
-      <span class='email'>justingorham@gmail.com</span>
-        <span class='divider'>|</span>
-        <span class='address'>
-          Raleigh, NC, US
-        </span>
-    </div>
-      <div id='profilesBlock'>
-            <span class='url'>
-              <a href='https://github.com/justingorham'>https://github.com/justingorham</a>
-            </span>
-            <span class='divider'>|</span>
-            <span class='url'>
-              <a href='https://www.linkedin.com/in/justingorham/'>https://www.linkedin.com/in/justingorham/</a>
-            </span>
-            
-      </div>
-  </div>
-  <div class='sectionLine'></div>
-
-
-  <div id='workBlock' class="sectionBlock">
-    <div class='sectionName'>
-      <span>EXPERIENCE</span>
-    </div>
-    <div class='sectionContent'>
-			<div class="jobBlock">
-	      <div class='blockHeader'>
-	        <span class='title'>
-	          , Senior Software Engineer
-	        </span>
-	        <span class='date'>
-	          2018-10-22 &mdash; Present
-	        </span>
-	      </div>
-	      <div><a href=''></a></div>
-	      <div class='separator'></div>
-			</div>
-			<div class="jobBlock">
-	      <div class='blockHeader'>
-	        <span class='title'>
-	          , Senior Software Engineer
-	        </span>
-	        <span class='date'>
-	          2015-05-18 &mdash; 2018-10-18
-	        </span>
-	      </div>
-	      <div><a href=''></a></div>
-	      <div class='separator'></div>
-			</div>
-			<div class="jobBlock">
-	      <div class='blockHeader'>
-	        <span class='title'>
-	          , .NET Developer
-	        </span>
-	        <span class='date'>
-	          2013-09-03 &mdash; 2015-05-08
-	        </span>
-	      </div>
-	      <div><a href=''></a></div>
-	      
-			</div>
-    </div>
-  </div>
-  <div class='sectionLine'></div>
-
-
-
-
-	<div id='education' class="sectionBlock">
-    <div class='sectionName'>
-      <span>EDUCATION</span>
-    </div>
-    <div class='sectionContent'>
-      <div class='educationBlock'>
-        <span class='title'>
-          North Carolina State University
-        </span>
-        <span class='date'>
-          2006-08-16 &mdash; 2010-05-14
-        </span>
-        <div class=''>
-          Bachelor  - Computer Science
+</style>
+  </head>
+  <body>
+      <header class="masthead">
+          <h1>Justin Gorham</h1>
+          <h2>Software Engineer</h2>
+      </header>
+      <section id="contact">
+        <h3>Contact</h3>
+        <div class="grid-list">
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:justingorham@gmail.com">justingorham@gmail.com</a>
+            </div>
+            <div>
+              <h4>Website</h4>
+              <a href="https://justin.gorh.am">justin.gorh.am</a>
+            </div>
         </div>
-      </div>
-      <div class='separator'></div>
-      <div class='educationBlock'>
-        <span class='title'>
-          North Carolina State University
-        </span>
-        <span class='date'>
-          2006-08-16 &mdash; 2010-05-14
-        </span>
-        <div class=''>
-          Bachelor  - Applied Mathematics
+      </section>
+        <section id="profiles">
+          <h3>Profiles</h3>
+          <div class="grid-list">
+              <div>
+                  <h4>Github</h4>
+                    <a href="https://github.com/justingorham">justingorham</a>
+              </div>
+              <div>
+                  <h4>Linkedin</h4>
+                    <a href="https://www.linkedin.com/in/justingorham/">justingorham</a>
+              </div>
+          </div>
+        </section>
+
+      <section id="work">
+        <h3>Work</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>CenterEdge Software</h4>
+                  <span>
+                    <time datetime="2018-10-22">Oct 2018</time> –
+                    Present
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Senior Software Engineer</strong>
+                    <a href="https://centeredgesoftware.com/">centeredgesoftware.com</a>
+                </div>
+              </header>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Itron</h4>
+                  <span>
+                    <time datetime="2015-05-18">May 2015</time> –
+                    <time datetime="2018-10-18">Oct 2018</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Senior Software Engineer</strong>
+                    <a href="https://itron.com">itron.com</a>
+                </div>
+              </header>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>CafePress/CircleGraphics</h4>
+                  <span>
+                    <time datetime="2013-09-03">Sep 2013</time> –
+                    <time datetime="2015-05-08">May 2015</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>.NET Developer</strong>
+                    <a href="https://www.circlegraphicsonline.com/">www.circlegraphicsonline.com</a>
+                </div>
+              </header>
+            </article>
         </div>
-      </div>
-      <div class='separator'></div>
-      <div class='educationBlock'>
-        <span class='title'>
-          North Carolina State University
-        </span>
-        <span class='date'>
-          2010-08-18 &mdash; 2012-08-10
-        </span>
-        <div class=''>
-          Master  - 
+      </section>
+      <section id="education">
+        <h3>Education</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>North Carolina State University</h4>
+                  <span>
+                    <time datetime="2006-08-16">Aug 2006</time> –
+                    <time datetime="2010-05-14">May 2010</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Computer Science</strong>
+                    <a href="https://www.ncsu.edu/">www.ncsu.edu</a>
+                </div>
+              </header>
+                <p>Bachelor</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>North Carolina State University</h4>
+                  <span>
+                    <time datetime="2006-08-16">Aug 2006</time> –
+                    <time datetime="2010-05-14">May 2010</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Applied Mathematics</strong>
+                    <a href="https://www.ncsu.edu/">www.ncsu.edu</a>
+                </div>
+              </header>
+                <p>Bachelor</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>North Carolina State University</h4>
+                  <span>
+                    <time datetime="2010-08-18">Aug 2010</time> –
+                    <time datetime="2012-08-10">Aug 2012</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <a href="https://www.ncsu.edu/">www.ncsu.edu</a>
+                </div>
+              </header>
+                <p>Master</p>
+            </article>
         </div>
-      </div>
-      
-    </div>
-	</div>
-  <div class='sectionLine'></div>
-
-	<div id='skills' class="sectionBlock">
-    <div class='sectionName'>
-      <span>SKILLS</span>
-    </div>
-    <div class='sectionContent'>
-      <div class='skillBlock'>
-        <span class='title'>Angular <em>(Expert)</em>:</span>
-      </div>
-      <div class='skillBlock'>
-        <span class='title'>Typescript/Javascript <em>(Expert)</em>:</span>
-      </div>
-      <div class='skillBlock'>
-        <span class='title'>.NET <em>(Proficient)</em>:</span>
-      </div>
-      <div class='skillBlock'>
-        <span class='title'>Containerization <em>(Proficient)</em>:</span>
-      </div>
-    </div>
-	</div>
-  <div class='sectionLine'></div>
-
-
-
-	</body>
+      </section>
+      <section id="skills">
+        <h3>Skills</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Angular</h4>
+            </div>
+            <div>
+                <h4>Typescript/Javascript</h4>
+            </div>
+            <div>
+                <h4>.NET</h4>
+            </div>
+            <div>
+                <h4>Containerization</h4>
+            </div>
+        </div>
+      </section>
+  </body>
 </html>
