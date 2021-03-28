@@ -5,11 +5,11 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "generate:json": "yaml2json -p -s resume.yml",
+    "generate:json": "ts-node tools/generate-resume-json.ts",
     "export:html": "resume export index.html",
-    "export:md": "resume export README.html -t md && yarn rename:readme",
-    "export:pdf": "resume export resume.pdf",
-    "postinstall": "husky install",
+    "export:md": "resume export README.html --theme jsonresume-theme-md && yarn rename:readme",
+    "export:pdf": "resume export resume.pdf --theme jsonresume-theme-flat",
+    "postinstall": "husky install && ts-node tools/schema-declaration-files.ts",
     "rename:readme": "node -e \"require('fs').rename('README.html', 'README.md', function(err) { if (err) console.error(err); console.log('File successfully renamed!') })\"",
     "test": "yarn generate:json && resume validate"
   },
@@ -25,9 +25,14 @@
   },
   "homepage": "https://github.com/justingorham/resume#readme",
   "devDependencies": {
-    "husky": "^5.0.9",
+    "fs-extra": "^9.1.0",
+    "husky": "^5.2.0",
+    "json-schema-to-typescript": "^10.1.3",
     "jsonresume-theme-md": "^1.1.1",
+    "jsonresume-theme-onepage": "^0.0.3",
     "resume-cli": "^3.0.4",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3",
     "yamljs": "^0.3.0"
   }
 }

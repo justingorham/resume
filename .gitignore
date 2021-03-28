@@ -115,3 +115,5 @@ dist
 .pnp.*
 
 resume.pdf
+schema.d.ts
+schema.json
