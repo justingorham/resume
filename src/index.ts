@@ -7,9 +7,9 @@ import { CafePressCircleGraphics, CenterEdge, Itron } from './work';
 export const resume: ResumeSchema = {
     basics,
     education: [
+        masterCompSci,
         bachelorCompSci,
         bachelorAppliedMath,
-        masterCompSci
     ],
     work: [
         CenterEdge,

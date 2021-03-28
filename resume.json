@@ -26,6 +26,13 @@
     {
       "institution": "North Carolina State University",
       "url": "https://www.ncsu.edu/",
+      "studyType": "Master",
+      "startDate": "2010-08-18",
+      "endDate": "2012-08-10"
+    },
+    {
+      "institution": "North Carolina State University",
+      "url": "https://www.ncsu.edu/",
       "studyType": "Bachelor",
       "startDate": "2006-08-16",
       "endDate": "2010-05-14",
@@ -38,13 +45,6 @@
       "startDate": "2006-08-16",
       "endDate": "2010-05-14",
       "area": "Applied Mathematics"
-    },
-    {
-      "institution": "North Carolina State University",
-      "url": "https://www.ncsu.edu/",
-      "studyType": "Master",
-      "startDate": "2010-08-18",
-      "endDate": "2012-08-10"
     }
   ],
   "work": [
@@ -55,7 +55,10 @@
       "position": "Senior Software Engineer",
       "url": "https://centeredgesoftware.com/",
       "startDate": "2018-10-22",
-      "highlights": []
+      "highlights": [
+        "Expanded customer facing waiver kiosk application to include self-service functionality by implementing a reactive-state application architecture",
+        "As team lead, implemented cloud based membership management system that integrates with on-premise POS application as well as e-commerce web stores"
+      ]
     },
     {
       "name": "Itron",
@@ -64,7 +67,10 @@
       "url": "https://itron.com",
       "startDate": "2015-05-18",
       "endDate": "2018-10-18",
-      "highlights": []
+      "highlights": [
+        "Implemented meter configuration sub-application in headend application by creating a widget based system that is dynamically configruable by a custom XML based data definition language",
+        "Implemented custom SVG-based meter rate-schedule control using D3.js"
+      ]
     },
     {
       "name": "CafePress/CircleGraphics",
@@ -72,7 +78,10 @@
       "position": ".NET Developer",
       "url": "https://www.circlegraphicsonline.com/",
       "startDate": "2013-09-03",
-      "endDate": "2015-05-08"
+      "endDate": "2015-05-08",
+      "highlights": [
+        "Increased customer conversion rate by implementing mobile-only single page application"
+      ]
     }
   ],
   "skills": [
